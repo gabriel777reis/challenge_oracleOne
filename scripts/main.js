@@ -1,5 +1,7 @@
 
- function botaocriptografia (){
+
+
+function botaocriptografia (){
    //essa var recebe o que foi escrito dentro da label  
   var capturaInput = document.getElementById("armazenainput").value;
    criptografa = capturaInput;
@@ -15,10 +17,13 @@
   
    armazenaCriptografia = armazenaCriptografia.replace(/e|i|a|o|u/gi, function(matched){
       return mapObj[matched]
+     
    });
+   
+   armazenaMsg(armazenaCriptografia);
 
-   alert(armazenaCriptografia);
  }  
+
 
  function botaodescriptografia (){
    var capturaInput = document.getElementById("armazenainput").value;
@@ -35,11 +40,17 @@
   
    armazenaDescriptografia = armazenaDescriptografia.replace(/enter|imes|ai|ober|ufat/gi, function(matched){
       return mapObj[matched]
-   });
-
-   alert(armazenaDescriptografia);
-
-
+   });  
+ 
+   armazenaMsg(armazenaDescriptografia);
+   
  }
 
+ 
+function armazenaMsg(armazenatxt){
+   var msg = document.getElementById("recebeMensagem");
+    msg.innerHTML = (armazenatxt);
+
+ 
+}
 
