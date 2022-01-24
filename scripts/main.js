@@ -51,6 +51,22 @@ function armazenaMsg(armazenatxt){
    var msg = document.getElementById("recebeMensagem");
     msg.innerHTML = (armazenatxt);
 
+
  
+}
+
+function copiarTexto() {
+   let textoCopiado = document.getElementById("recebeMensagem");
+   textoCopiado.select();
+   textoCopiado.setSelectionRange(0, 99999)
+   document.execCommand("copy");
+   
+   // cria uma mensagem de copiado
+   Swal.fire(
+      'Copiado com sucesso!',
+      "Obrigado !",
+      "success"  
+      
+      )
 }
 
