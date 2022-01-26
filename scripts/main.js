@@ -64,7 +64,7 @@ function copiarTexto() {
    // cria uma mensagem de copiado
    Swal.fire(
       'Copiado com sucesso!',
-      "Obrigado !",
+      "Obrigado por utilizar nossa aplicação !",
       "success"  
       
       )
