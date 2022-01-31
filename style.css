@@ -1,7 +1,7 @@
 
 
 body {
-  min-height:100vh;
+ 
   
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background:  url(img/gr.dacunha.png)center  repeat;
@@ -46,9 +46,11 @@ body {
 #caixa1{
     margin-top: 50px;
     padding-top: 10px;
-     width: 600px;
+    max-width: 500px;
     background-color: aliceblue;
     border-radius: 0.5em;
+    align-content: center;
+    size: 10px;
 
 }
 
@@ -60,4 +62,5 @@ body {
   background-color: aliceblue;
   text-align: center;
 }
+
 
