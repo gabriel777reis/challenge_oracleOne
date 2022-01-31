@@ -21,6 +21,7 @@ function botaocriptografia (){
    });
    
    armazenaMsg(armazenaCriptografia);
+   
 
  }  
 
@@ -44,15 +45,14 @@ function botaocriptografia (){
  
    armazenaMsg(armazenaDescriptografia);
    
+   
  }
 
  
 function armazenaMsg(armazenatxt){
    var msg = document.getElementById("recebeMensagem");
     msg.innerHTML = (armazenatxt);
-
-
- 
+    
 }
 
 function copiarTexto() {
@@ -61,12 +61,23 @@ function copiarTexto() {
    textoCopiado.setSelectionRange(0, 99999)
    document.execCommand("copy");
    
-   // cria uma mensagem de copiado
-   Swal.fire(
-      'Copiado com sucesso!',
-      "Obrigado !",
-      "success"  
-      
-      )
+   confimaCopiar();
+     
 }
 
+function confimaCopiar(){
+   
+  Toast = Swal.mixin({
+   toast: true,
+   position: 'top-end',
+   icon: 'success',
+   title: 'Texto copiado',
+   showConfirmButton: false,
+   timer: 1000,
+   
+ })
+ Toast.fire({
+   icon: 'success',
+   title: 'Copiado com sucesso'
+ })
+}

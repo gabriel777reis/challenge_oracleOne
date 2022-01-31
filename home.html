@@ -33,59 +33,68 @@
     </div>
     
     
-    <div id="caixa1" class="container-fluid md-3" >
-        
-        <label  for="exampleInput" class="form-label"><p>** Digite apenas letras minúsculas **</p></label>
-        <textarea  class="form-control" id="armazenainput" rows="2" placeholder="Digite Aqui"></textarea>
-       
-       
-        <!-- essa div controla os botoes -->
-        <div  class="gap-2 d-flex justify-content-md-center " data-toggle="modal" data-target="#meuModal">
-            
-            <input type="button" class="btn" onclick="botaocriptografia()"    value=" Criptografar">
-            <input type="button" class="btn" onclick="botaodescriptografia()" value="Descriptografar">
-          
+    <div id="caixa1" class="container text-center" >
+        <div class="row">
+          <div class="col-3-md">
+      
+            <legend  for="exampleInput" class="form-label"><p>Decodificador!</p></legend>
+           
+              <form class="myform">
+             <textarea  class="form-control" id="armazenainput" rows="2" placeholder="Digite apenas letras minúsculas"></textarea>
+             </form>
+            <!-- essa div controla os botoes -->
+                <div id="botaoModal"   >
+                
+                <input type="button"  class="btn btn-sm" onclick="botaocriptografia()" value=" Criptografar"data-toggle="modal" data-target="#meuModal" >
+                <input type="button"  class="btn btn-sm " onclick="botaodescriptografia()" value="Descriptografar" data-toggle="modal" data-target="#meuModal">
+                
+                 </div>
+                
+          </div>
         </div>
-        
       </div>
 
 
   <!-- Modal -->
-  <div id="meuModal" class="modal fade " role="dialog">
-    <div class="modal-dialog">
 
-      <!-- Conteúdo do modal-->
-      <div class="modal-content">
-
-        <!-- Cabeçalho do modal -->
-        <div class="modal-header">
-          <h4 class="modal-title">Aqui está seu texto !</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Corpo do modal -->
-        <div class="modal-body">
-           <textarea id="recebeMensagem" class="form-control" rows="3"></textarea>
-        </div>
-
-        <!-- Rodapé do modal-->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          <button  id="btnCopiar" onclick="copiarTexto()" type="button" class="btn btn-primary" >Copiar</button>
-        </div>
-
+      
+      <div id="meuModal" class="modal" role="dialog">
+        <div class="modal-dialog">
+  
+        <!-- Conteúdo do modal-->
+        <div class="modal-content container ">
+  
+          <!-- Cabeçalho do modal -->
+          <div class="modal-header">
+            <h4 class="modal-title">Aqui está seu texto !</h4>
+            <button type="button" class="btn-danger close" data-dismiss="modal">&times;</button>
+          </div>
+  
+          
+          <!-- Corpo do modal -->
+          <div class="modal-body">
+             <textarea id="recebeMensagem" class="form-control" rows="3"></textarea>
+          </div>
+  
+          <!-- Rodapé do modal-->
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            <button  id="btnCopiar" onclick="copiarTexto()" type="button" class="btn btn-primary " role="alert">Copiar</button>
+  
+          </div>
+  
+          </div>
         </div>
       </div>
-    </div>
 
    
-
 
 
  <!--rodape************  -->
     <footer class="footer  fixed-bottom container-fluid bg-light">
         <div >
-            <h5><a href="https://github.com/gabriel777reis"> https://github.com/gabriel777reis</a></h5>
+            <h5><a href="https://github.com/gabriel777reis" class="btn btn-primary"> https://github.com/gabriel777reis</a></h5>
 
         </div>  
 
